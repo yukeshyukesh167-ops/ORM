@@ -1,6 +1,6 @@
 # Ex01 Django ORM Web Application
 ## Date: 03/12/2025
-## Ref no: 25019212
+##Ref no: 25019212
 
 ## AIM
 To develop a Django Application to store and retrieve data from a E-Commerce Website Database for Amazon or Flipkart using Object Relational Mapping(ORM).
@@ -32,7 +32,14 @@ Apply the migration files of the created app to the database
 Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
-### models.py
+admin.py
+python
+from django.contrib import admin
+from .models import Product, ProductAdmin
+
+admin.site.register(Product, ProductAdmin)
+
+ models.py
 python
 from django.db import models
 from django.contrib import admin
@@ -60,13 +67,6 @@ class ProductAdmin(admin.ModelAdmin):
         'offer',
         'delivery_date',
     )
-
-###admin.py
-python
-from django.contrib import admin
-from .models import Product, ProductAdmin
-
-admin.site.register(Product, ProductAdmin)
 
 
 ## OUTPUT
